@@ -297,8 +297,6 @@ public class Call implements CreateConnectionResponse {
 
     private int mConnectionCapabilities;
 
-    private int mSupportedAudioRoutes;
-
     private boolean mIsConference = false;
 
     private Call mParentCall = null;
@@ -825,16 +823,6 @@ public class Call implements CreateConnectionResponse {
         }
     }
 
-    int getSupportedAudioRoutes() {
-        return mSupportedAudioRoutes;
-    }
-
-    void setSupportedAudioRoutes(int audioRoutes) {
-        if (mSupportedAudioRoutes != audioRoutes) {
-            mSupportedAudioRoutes = audioRoutes;
-        }
-    }
-
     Call getParentCall() {
         return mParentCall;
     }
@@ -938,7 +926,6 @@ public class Call implements CreateConnectionResponse {
         setCallerDisplayName(
                 connection.getCallerDisplayName(), connection.getCallerDisplayNamePresentation());
         setConnectionCapabilities(connection.getConnectionCapabilities());
-        setSupportedAudioRoutes(connection.getSupportedAudioRoutes());
         setVideoProvider(connection.getVideoProvider());
         setVideoState(connection.getVideoState());
         setRingbackRequested(connection.isRingbackRequested());
