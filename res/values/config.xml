@@ -48,4 +48,5 @@
 
     <!-- DTMF key to be used for LCH hold tone -->
     <string name="lch_dtmf_key" translatable="false">D</string>
+    
 </resources>
