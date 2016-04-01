@@ -413,7 +413,7 @@ public class MissedCallNotifierImpl extends CallsManagerListenerBase implements 
         // Reset the list of missed calls
         mMissedCalls.clear();
 
-        if (sendNotificationCustomComponent(null, mMissedCallCount)) {
+        if (sendNotificationCustomComponent(null, mMissedCalls.size())) {
             return;
         }
 
